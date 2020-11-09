@@ -14,12 +14,13 @@ class Reader(object):
         
         last_page = 0
         player.say(f"You have decided to start reading from page {page_number}")
-        for num in range(0, pages):
+        for num in range(page_number, pages):
+            player.say(f"Now reading page {num}")
             page = pdfreader.getPage(num)
             text = page.extractText()
             player.say(text)
             player.runAndWait()
-            last_page = num
+            
         player.say(f"Your last page read was {last_page}")
 
 if __name__ == "__main__":
