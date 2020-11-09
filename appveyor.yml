@@ -53,12 +53,12 @@ install:
   - sh: "python3 -m pip install -r requirements.txt"
 
 build_script:
-  - cmd: "pyinstaller --onefile analyzer.spec"
-  - sh: "pyinstaller --onefile analyzer.spec"
+  - cmd: "pyinstaller --onefile audiobook.spec"
+  - sh: "pyinstaller --onefile audiobook.spec"
 
 artifacts:
   - path: /dist/*.exe
-    name: AnalyzerExe
+    name: PDF_Reader
 
   - path: /dist/pdf_reader
     name: PDF_Reader
